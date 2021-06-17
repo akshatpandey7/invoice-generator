@@ -93,7 +93,7 @@ public class InvoiceGeneratorConstants {
     /**
      * The constant LOGO_FILE_NAME.
      */
-    public static final String LOGO_FILE_NAME = "Fortinet.png";
+    public static final String LOGO_FILE_NAME = "src/main/resources/Fortinet.png";
 
     /**
      * The constant ISSUING_COMPANY_DETAILS.
@@ -148,7 +148,7 @@ public class InvoiceGeneratorConstants {
     /**
      * The constant EMAIL_INVALID_ERROR_MSG.
      */
-    public static final String EMAIL_INVALID_ERROR_MSG = "Email is not valid format";
+    public static final String EMAIL_INVALID_ERROR_MSG = ":email is not in valid format";
 
     /**
      * The constant INVOICE_GENERATED_SUCCESSFULLY.

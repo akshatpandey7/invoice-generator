@@ -6,6 +6,7 @@ import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
 import com.itextpdf.text.pdf.PdfWriter;
 import org.fortinet.InvoiceGeneratorConstants;
+import org.fortinet.exception.*;
 import org.fortinet.model.Invoice;
 import org.fortinet.utils.ItextPdfUtils;
 import org.fortinet.validations.*;
@@ -121,7 +122,7 @@ public class InvoiceGeneratorImpl implements InvoiceGenerator{
      * @param invoice the invoice
      */
     @Override
-    public boolean validateInvoice(Invoice invoice){
+    public boolean validateInvoice(Invoice invoice) throws Exception {
         logger.info("validateInvoice() started...");
         try {
             invoiceValidator.validateInvoice(invoice);
@@ -152,6 +153,7 @@ public class InvoiceGeneratorImpl implements InvoiceGenerator{
         catch (Exception e){
             logger.error("Exception occured in validateInvoice()");
             e.printStackTrace();
+            throw e;
         }
         logger.info("validateInvoice() ended...");
         return true;
