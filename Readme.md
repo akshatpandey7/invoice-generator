@@ -34,7 +34,7 @@ The command line arguments consist of the following:
 
  
 
-- invoice.details = Path of the json file with invoice details
+- invoice.details = Name of the JSON file in the root directory
 - invoice.password = Password with which you want to protect the generated file
 
  
